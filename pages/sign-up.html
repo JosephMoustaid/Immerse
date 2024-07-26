@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/logo.png">
+    <link rel="manifest" href="../images/logo.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Immerse</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card p-2 p-md-4 shadow-lg" style="width: 100%; max-width: 400px;">
+            <div class="text-center mb-2">
+                <img src="../images/logo.png" alt="Logo" width="72" height="72">
+                <h1 class="h4 mt-3">Sign up to <span class="purple">Immerse</span></h1>
+            </div>
+            <form action="" method="post" class="sign-up-form row">
+                <div class="form-group mb-3 col-12 col-md-6">
+                    <label for="email" class="sr-only">fristname</label>
+                    <input type="text" id="firstname" class="form-control" placeholder="fristname" required autofocus>
+                </div>
+                <div class="form-group mb-3 col-12 col-md-6">
+                    <label for="lastname" class="sr-only">lastname</label>
+                    <input type="text" id="lastname" class="form-control" placeholder="lastname" required autofocus>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="birthdate" class="sr-only">birthdate</label>
+                    <input type="date" id="birthdate" class="form-control" placeholder="birthdate" required autofocus>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password1" class="sr-only col-12 col-md-6">Password</label>
+                    <input type="password" id="password1" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password2" class="sr-only col-12 col-md-6">Confirm Password</label>
+                    <input type="password" id="password2" class="form-control" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" id="confirm" class="btn btn-purple btn-block custom-button">Create account</button>
+            </form>
+            <div class="text-center mt-2">
+                <a href="./sign-in.html" class="text-muted">Alrady have an account? Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
