@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/logo.png">
+    <link rel="manifest" href="../images/logo.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+  
+    <title>Create a Course</title>
+</head>
+<body class="sign-up-body">
+
+    <div id="courseCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Page 1: Course Details -->
+            <div class="carousel-item active">
+                <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 600px;">
+                        <form action="" method="post" class="course-form">
+                            <div class="form-group mb-3">
+                                <label for="courseName" class="form-label">Course Name <span class="text-danger">*</span></label>
+                                <input type="text" id="courseName" class="form-control" placeholder="Enter course name" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="category" class="form-label">Category <span class="text-danger">*</span></label>
+                                <input type="text" id="category" class="form-control" placeholder="Enter category" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="environment" class="form-label">Environment <span class="text-danger">*</span></label>
+                                <select id="environment" class="form-select" required>
+                                    <option value="" disabled selected>Select environment</option>
+                                    <option value="lab">Lab</option>
+                                    <option value="school">School</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="courseDescription" class="form-label">Course Description <span class="text-danger">*</span></label>
+                                <textarea id="courseDescription" class="form-control" rows="4" placeholder="Enter course description" required></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="privacy" class="form-label">Privacy <span class="text-danger">*</span></label>
+                                <select id="privacy" class="form-select" required>
+                                    <option value="" disabled selected>Select privacy</option>
+                                    <option value="private">Private</option>
+                                    <option value="public">Public</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 2: File Upload -->
+            <div class="carousel-item">
+                <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 600px;">
+                        <form action="" method="post" class="file-upload-form">
+                            <div class="form-group mb-3">
+                                <label for="pdfFile" class="form-label">Upload PDF <span class="text-danger">*</span></label>
+                                <input type="file" id="pdfFile" class="form-control-file" accept=".pdf" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="youtubeEmbed" class="form-label">YouTube Video Embed Code <span class="text-danger">*</span></label>
+                                <input type="text" id="youtubeEmbed" class="form-control" placeholder="Paste YouTube embed code" required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 3: More Assets -->
+            <div class="carousel-item">
+                <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 600px;">
+                        <form action="" method="post" class="more-assets-form">
+                            <p>Do you want to upload more assets?</p>
+                            <div class="form-group mb-3">
+                                <label for="moreAssets" class="form-label">Select an option:</label>
+                                <select id="moreAssets" class="form-select" required>
+                                    <option value="" disabled selected>Select option</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 4: Upload Additional Assets -->
+            <div class="carousel-item" id="additionalAssetsPage" style="display: none;">
+                <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 600px;">
+                        <form action="" method="post" class="additional-assets-form">
+                            <div class="form-group mb-3">
+                                <label for="assetType" class="form-label">What type of file do you want to upload?</label>
+                                <select id="assetType" class="form-select" required>
+                                    <option value="" disabled selected>Select file type</option>
+                                    <option value="3dModel">3D Model (.gltf, .obj)</option>
+                                    <option value="audio">Audio</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3" id="3dModelUpload" style="display: none;">
+                                <label for="3dModelFile" class="form-label">Upload 3D Model File</label>
+                                <input type="file" id="3dModelFile" class="form-control-file" accept=".gltf,.obj">
+                            </div>
+                            <div class="form-group mb-3" id="audioUpload" style="display: none;">
+                                <label for="audioFile" class="form-label">Upload Audio File</label>
+                                <input type="file" id="audioFile" class="form-control-file" accept=".mp3,.wav">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#courseCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#courseCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('moreAssets').addEventListener('change', function() {
+            var additionalAssetsPage = document.getElementById('additionalAssetsPage');
+            var option = this.value;
+            additionalAssetsPage.style.display = option === 'yes' ? 'block' : 'none';
+        });
+
+        document.getElementById('assetType').addEventListener('change', function() {
+            var assetType = this.value;
+            document.getElementById('3dModelUpload').style.display = assetType === '3dModel' ? 'block' : 'none';
+            document.getElementById('audioUpload').style.display = assetType === 'audio' ? 'block' : 'none';
+        });
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>

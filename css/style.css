@@ -12411,4 +12411,87 @@ body a, body a:hover {
   font-size: 0.8em;
 }
 
+#medium-to-large-device-sign-up {
+  display: none;
+}
+
+/* Hide sign-up for small devices by default */
+#small-device-sign-up {
+  display: none;
+}
+
+/* Media query for medium and large devices */
+@media (min-width: 768px) {
+  #small-device-sign-up {
+    display: none;
+  }
+  #medium-to-large-device-sign-up {
+    display: flex;
+  }
+}
+/* Media query for small devices */
+@media (max-width: 767px) {
+  #medium-to-large-device-sign-up {
+    display: none;
+  }
+  #small-device-sign-up {
+    display: flex;
+  }
+}
+.sign-up-body .form-group {
+  min-width: 300px;
+}
+.sign-up-body .carousel-item {
+  text-align: center;
+  padding: 20px;
+}
+.sign-up-body .carousel-control-prev, .sign-up-body .carousel-control-next {
+  filter: invert(100%);
+}
+.sign-up-body .carousel-control-prev, .sign-up-body .carousel-control-next {
+  filter: invert(100%);
+}
+.sign-up-body .container-fluid, .sign-up-body .container-sm, .sign-up-body .container-md, .sign-up-body .container-lg, .sign-up-body .container-xl, .sign-up-body .container-xxl {
+  display: flex;
+  height: 100vh;
+}
+.sign-up-body .carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  right: -25%;
+  z-index: 1000;
+}
+.sign-up-body .carousel-controls button {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.sign-up-body .carousel-controls button:hover {
+  background-color: #5a32a1;
+}
+.sign-up-body .container-fluid, .sign-up-body .container-sm, .sign-up-body .container-md, .sign-up-body .container-lg, .sign-up-body .container-xl, .sign-up-body .container-xxl {
+  display: flex;
+  height: 100vh;
+}
+.sign-up-body .left-panel, .sign-up-body .right-panel {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up-body .left-panel {
+  text-align: center;
+}
+.sign-up-body .right-panel {
+  background: linear-gradient(45deg, #6a11cb, #9f25fc);
+}
+.sign-up-body .undeline {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
