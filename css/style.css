@@ -12207,6 +12207,48 @@ body a, body a:hover {
   height: 70vh;
 }
 
+.profile {
+  font-size: 0.8em;
+  min-width: 500px;
+  max-width: 700px;
+}
+.profile .profile-image-container {
+  position: relative;
+}
+.profile .profile-image-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+  padding: 3px;
+}
+.profile .edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(156, 156, 156);
+  border-radius: 50%;
+  z-index: 300;
+}
+.profile .edit-icon input[type=file] {
+  display: none;
+}
+.profile input::placeholder, .profile input::content, .profile input::-ms-value, .profile input:focus {
+  font-size: 0.8em !important;
+}
+.profile .user-id-container .user-id {
+  color: rgb(43, 82, 255);
+}
+
+.settings .setting fieldset {
+  margin-top: 15px;
+  border: 1px solid rgba(66, 66, 66, 0.541);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.8em;
+}
+
 .group-chat .group-chat-head {
   background-color: rgba(66, 66, 66, 0.541);
   height: 60px;
@@ -12315,6 +12357,58 @@ body a, body a:hover {
 }
 .group-chat .group-chat-new-msg .send-btn:hover {
   background-color: rgba(182, 182, 182, 0.541);
+}
+
+.profile {
+  font-size: 0.8em;
+  min-width: 500px;
+  max-width: 700px;
+}
+.profile .profile-image-container {
+  position: relative;
+}
+.profile .profile-image-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+  padding: 3px;
+}
+.profile .edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(156, 156, 156);
+  border-radius: 50%;
+  z-index: 300;
+}
+.profile .edit-icon input[type=file] {
+  display: none;
+}
+.profile input::placeholder, .profile input::content, .profile input::-ms-value, .profile input:focus {
+  font-size: 0.8em !important;
+}
+.profile .user-id-container .user-id {
+  color: rgb(43, 82, 255);
+}
+
+.students .table {
+  border-radius: 20px !important;
+  font-size: 0.8em;
+}
+.students .table img {
+  border-radius: 50% !important;
+  object-fit: cover;
+  width: 30px !important;
+  height: 30px !important;
+}
+.students .table .gender {
+  color: rgba(66, 66, 66, 0.541);
+}
+
+.notifications {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */
